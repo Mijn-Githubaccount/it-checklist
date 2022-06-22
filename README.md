@@ -24,6 +24,7 @@ Installatie:
 •	Maak nog drie tabellen en noem ze: sales, marketing en hr.
 •	Voeg “9” columns bij iedere tabel en noem ze: Nummer, Voornaam, Achternaam, IDnummer, Email, Afdeling, Device, Computernaam, Telnummer.
 •	Open de applicatie via een webbrowser en login.
+Notitie: Je moet het zipbestand "benodigde mappen" uitpakken bij de applicatie zetten, anders werkt de applicatie niet.
 
 Versienummer:
 •	1.0
