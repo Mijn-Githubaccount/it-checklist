@@ -1,0 +1,37 @@
+Docker-compose-bestand:
+version: "3"
+services: # toeveogen van 3 services in mijn geval: mysql, golang en phpmyadmin
+  mysql: 
+    image: mysql:latest # gebruik de laatste versie van mysql
+    container_name: mysql # een naam van de container. in mijn geval "mysql"
+    restart: always
+    environment: # variabelen die nodig zijn om een verbinding te kunnen maken met mysql.
+      MYSQL_USER: Teamleider # een gebruiker maken voor inloggen op mysql
+      MYSQL_ROOT_PASSWORD: Uu@12345 # het sql-rootwachtwoord
+      MYSQL_PASSWORD: Uu@12345 # het wachtwoord van de gebruiker (golang)
+      MYSQL_DATABASE: it-checklist # maak een nieuwe database bij deze naam (it-checklist)
+    volumes: # welk volume wordt gebruikt voor mysql
+      - mijn_db:/var/lib/mysql
+    ports:
+      - '3306:3306' #mysqlpoort
+
+  go:
+    image: mijndockeraccount/it-checklist:1.0 #imagenaam op Docker-hub
+    container_name: go #naam van de golangcontainer.
+    ports: # het poort waarmee je de golang-webapplicatie kan benaderen.
+      - "8080:8080"
+    depends_on: # golang is afhankelijk op mysql-database.
+      - "mysql"
+
+  phpmyadmin:
+    depends_on: # phpmyadmin is afhankelijk op mysql-database.
+      - "mysql"
+    container_name: phpmyadmin # de naam van de phpmyadmincontainer.
+    image: phpmyadmin/phpmyadmin:latest # gebruik de laatste versie van phpmyadmin.
+    ports: # het poortnummer van phpmyadmin waarmee je phpmyadmin kunt benaderen.
+     - "8082:80"
+    environment: # variabelen die nodig zijn om een verbinding te kunnen maken met mysql.
+      MYSQL_ROOT_PASSWORD: Uu@12345 
+      PMA_HOST: mysql
+volumes: # voeg de blijvend gegevens toe in deze volume voor het geval de container wordt verwijderd.
+  mijn_db:
