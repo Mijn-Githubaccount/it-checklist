@@ -38,8 +38,6 @@ Installatie:
 
 •	Open de applicatie via een webbrowser en login.
 
-Notitie: Je moet het zipbestand "benodigde mappen" uitpakken bij de applicatie zetten, anders werkt de applicatie niet.
-
 Versienummer:
 1.0
 
