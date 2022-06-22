@@ -3,6 +3,7 @@
 IT Checklist is een checklist webapplicatie geschreven in go-taal en is bedoeld voor de IT-supportafdeling van een bedrijf.
 
 Functionaliteiten:
+
 1-	De gebruiker kan inlogen met zijn eigen account.
 
 2-	De gebruiker kan de gegevens toevoegen.
@@ -40,10 +41,10 @@ Installatie:
 Notitie: Je moet het zipbestand "benodigde mappen" uitpakken bij de applicatie zetten, anders werkt de applicatie niet.
 
 Versienummer:
-•	1.0
+1.0
 
 Gemaakt door:
-•	Reza Ahmadi
+Reza Ahmadi
 
 Licentie:
 De bron code mag gebruikt worden door anderen.
