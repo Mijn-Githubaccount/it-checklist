@@ -16,10 +16,6 @@ Functionaliteiten:
 
 6-	De inlogtijd van de gebruikers wordt opgeslagen in de database.
 
-Beeld:
- 
-
-  
 Installatie:
 
 •	Run de onderstaande docker-compose-bestand binnen een Ubuntu workstation.
