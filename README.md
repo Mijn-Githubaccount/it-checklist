@@ -2,7 +2,7 @@
 
 IT Checklist is een checklist webapplicatie geschreven in go-taal en is bedoeld voor de IT-supportafdeling van een bedrijf.
 
-Functionaliteiten:
+# Functionaliteiten:
 
 1-	De gebruiker kan inlogen met zijn eigen account.
 
@@ -16,7 +16,7 @@ Functionaliteiten:
 
 6-	De inlogtijd van de gebruikers wordt opgeslagen in de database.
 
-==> Installatie:
+# Installatie:
 
 •	Run de onderstaande docker-compose-bestand binnen een Ubuntu workstation.
 
